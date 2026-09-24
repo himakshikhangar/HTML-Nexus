@@ -37,14 +37,8 @@ This project was made while learning HTML, with Codex used as a helper for part 
 
 ## 🚀 Run It
 
-Open `index.html` in your browser, or visit the live project:
-
+Visit the live project:
 [View HTML NEXUS online](https://himakshikhangar.github.io/HTML-Nexus/)
-
-```text
-Download the project and open index.html in your browser.
-That's it.
-```
 
 ## 📁 Project Structure
 
