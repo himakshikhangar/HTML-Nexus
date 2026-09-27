@@ -19,7 +19,7 @@ HTML NEXUS is a small interactive website made to explore HTML tags through exam
 
 ## 🛠️ Built With
 
-HTML5 · CSS3 · Vanilla JavaScript
+HTML5 · CSS3 · Vanilla JavaScript · Anime.js Module · Codex Assistance
 
 ## 🤖 A Note About The Build
 
@@ -54,4 +54,5 @@ HTML-NEXUS/
 
 Made as a college assignment to understand HTML tags by actually using them instead of just reading about them.
 
-Made while learning HTML. :)
+Made while learning HTML, CSS and JS
+Used AI Assistance To Make The Website Visually Appealing.

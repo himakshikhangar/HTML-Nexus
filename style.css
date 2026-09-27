@@ -18,3 +18,26 @@
 html.motion-ready .reveal:not(.is-visible){opacity:0;transform:translateY(18px)}
 html.motion-ready .reveal{will-change:opacity,transform}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* First-visit HTML boot sequence and typewriter title. */
+.intro-sequence{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:24px;background:var(--bg);color:var(--ink);will-change:transform}
+.intro-sequence[hidden]{display:none!important}
+.intro-frame{position:relative;width:min(720px,100%);padding:clamp(24px,6vw,64px);border:1px solid var(--line);background:var(--panel);box-shadow:12px 12px 0 var(--bg-strong)}
+.intro-console{width:min(520px,100%);margin:auto;font-family:var(--mono)}
+.intro-label{margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid var(--line);color:var(--muted);font-size:.72rem;font-weight:500;letter-spacing:.12em}
+.intro-label span{float:right;color:var(--primary)}
+.boot-line{display:flex;align-items:center;gap:.7rem;min-height:32px;margin:0;color:var(--ink-soft);font-size:clamp(.68rem,2vw,.88rem);white-space:nowrap}
+.boot-prompt{color:var(--accent)}
+.boot-line b{margin-left:auto;color:var(--success);font-size:.62rem;font-weight:500;letter-spacing:.08em}
+.boot-track{height:3px;margin-top:22px;background:var(--panel-soft);overflow:hidden}
+.boot-progress{display:block;width:0;height:100%;background:var(--primary)}
+.intro-bracket{position:absolute;top:50%;color:var(--primary);font-family:var(--mono);font-size:clamp(3rem,10vw,6rem);line-height:1;opacity:0;pointer-events:none}
+.intro-bracket-left{left:clamp(6px,2vw,20px);transform:translateY(-50%)}
+.intro-bracket-right{right:clamp(6px,2vw,20px);transform:translateY(-50%)}
+.title-line{display:inline-block}
+.title-char{display:inline-block;opacity:1}
+.intro-caret{display:none;width:.055em;height:.72em;margin-left:.1em;background:var(--primary);vertical-align:-.02em;transform-origin:center;animation:caret-blink .72s steps(2,end) infinite}
+html.intro-active .intro-caret{display:inline-block}
+html.intro-active .title-char{opacity:0}
+@keyframes caret-blink{50%{background:transparent}}
+@media(max-width:520px){.intro-frame{padding:28px 18px}.intro-label{font-size:.62rem}.boot-line{gap:.45rem}.intro-bracket-left{left:2px}.intro-bracket-right{right:2px}}
